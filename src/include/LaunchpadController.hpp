@@ -21,3 +21,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
+#pragma once
+
+enum GameMode{
+    PEACEFUL,
+    EXERCISE,
+    AGGRESSIVE   
+}
+
+class LaunchpadController
+{
+    public:
+        GameMode gameMode;
+        launch(GameMode);
+
+    private:
+        float platformLaunchAngle;
+        pair<int, int> motorLimits;
+        void randomizeLauncherPlatformAngle();
+        void setPlatformAngle();
+        void performLaunchSequence();
+        bool setMotorAngle(int, pair<int,int>, float);
+}

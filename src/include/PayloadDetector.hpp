@@ -22,6 +22,8 @@
  * SOFTWARE.
  */
 
+#pragma once
+
 enum States {
       LOADED,
       WAITING_FOR_ENZP      
